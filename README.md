@@ -13,9 +13,9 @@ A beginner-friendly GUI Login Form built using Python and Tkinter that allows us
 - Tkinter
 
 # Valid Login Credentials
-| Username | Password |:
-| janusha | 1234 |
-| parvat | admin |
+| Username | Password | - 
+| janusha | 1234 |;
+| parvat | admin |;
 | student | python |
 
 #Concepts Used
