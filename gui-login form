@@ -1,0 +1,52 @@
+from tkinter import *
+from tkinter import messagebox
+
+# Dictionary storing usernames and passwords
+users = {
+    "janusha": "1234",
+    "parvat": "admin",
+    "student": "python"
+}
+# Login function
+def login():
+    username = entry1.get()
+    password = entry2.get()
+
+    # Check blank fields
+    if username == "" or password == "":
+        messagebox.showinfo("Error", "Please fill all fields")
+
+    # Check login details
+    elif username in users and users[username] == password:
+        messagebox.showinfo("Success", "Login Successful")
+
+    else:
+        messagebox.showinfo("Error", "Invalid Username or Password")
+
+# Create window
+root = Tk()
+root.title("GUI Login Form")
+root.geometry("350x250")
+
+# Heading
+Label(root, text="Login Form", font=("Arial", 16)).pack(pady=10)
+
+# Username label
+Label(root, text="Username").place(x=40, y=70)
+
+# Password label
+Label(root, text="Password").place(x=40, y=120)
+
+# Username entry
+entry1 = Entry(root, bd=4)
+entry1.place(x=140, y=70)
+
+# Password entry
+entry2 = Entry(root, bd=4, show="*")
+entry2.place(x=140, y=120)
+
+# Login button
+Button(root, text="Login", width=10, command=login).place(x=140, y=170)
+
+# Run GUI
+root.mainloop()
